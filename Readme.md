@@ -1,0 +1,1 @@
+This is a sample project for Parent child component example in angular java.
