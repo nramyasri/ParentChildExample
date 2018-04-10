@@ -1,25 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildComponent } from '../child.component';
 
 @Component({
   selector: 'app-parent-comp',
+  template: `
+    <app-child [childMessage]="parentMessage"></app-child>
+  `,
   templateUrl: './parent-comp.component.html',
-  styleUrls: ['./parent-comp.component.css'] ,
-  template: `<div class="parent">
- 
-  <h1>{{name}}</h1>
-
-  <child-component></child-component>
-
-</div>`,
-  
+  styleUrls: ['./parent-comp.component.css']
 })
 export class ParentCompComponent implements OnInit {
-   
-  directives : [ChildComponent]
 
+  parentMessage = "message from parent";
   constructor() { }
-
 
   ngOnInit() {
   }
